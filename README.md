@@ -8,10 +8,12 @@ to avoid violation of project owner right I delete this huge part of code
 ![Screenshot from 2021-05-18 14 45 08](https://user-images.githubusercontent.com/81580242/118648719-63883300-b7eb-11eb-9ec2-df6d38d53fb6.png)
 
 
-So, Admin panel at all contains less than 1% of project code, and I deleted about 50% of that code. And in this example Admin panel is not finished yet. Only 20-30% of code is finisthed, look to this screen   
+So, Admin panel at all contains less than 1% of project code, and I deleted about 50% of that code. And in this example Admin panel is not finished yet. Only 20-30% of code is finished, look to this screen   
 
 ![Taxi_04282021_122311](https://user-images.githubusercontent.com/81580242/118649266-fd4fe000-b7eb-11eb-8ccb-2e718b01184f.png)
 
 So, as a result, we can see less than 0,01% of project code. This project code is not critical for other part, not contains credential, but very important for beginners to lear how real project is buil at all. 
+
+I create huge description for beginners - what skills is most important to create similar projects, look please http://vb-net.com/MVC-future/Index.htm
 
 
