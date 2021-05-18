@@ -4,3 +4,4 @@ Rest 10% of code is split to 3 parts is VB.NET code:
 (1) 90% of VB.NET Code is WCF REST API, I don't publish it because this is critical part of commercial application.
 (2) 1% of code is Windows Service. Goal Windows service is push notification to Google Firebase.
 (3) Other part is Admin panel to application server. Apllication server contains most of code in ServiceController.vb
+
