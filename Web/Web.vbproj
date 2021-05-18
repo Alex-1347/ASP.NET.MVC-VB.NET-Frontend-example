@@ -1,0 +1,1182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2EFF1035-E342-4905-8586-953121A9BC16}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Web</RootNamespace>
+    <AssemblyName>Web</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Web.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Web.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartHttpClient">
+      <HintPath>..\..\..\SmartHttpClient\SmartHttpClient\bin\Debug\SmartHttpClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Mvc" />
+    <Import Include="System.Web.Mvc.Ajax" />
+    <Import Include="System.Web.Mvc.Html" />
+    <Import Include="System.Web.Routing" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contract\AirCityRateList.vb" />
+    <Compile Include="Contract\AirportCityRate1.vb" />
+    <Compile Include="Contract\AirportCityRate2.vb" />
+    <Compile Include="Contract\AirportList.vb" />
+    <Compile Include="Contract\CityList.vb" />
+    <Compile Include="Contract\Cities.vb" />
+    <Compile Include="Contract\CityCountry.vb" />
+    <Compile Include="Contract\DeviceList.vb" />
+    <Compile Include="Contract\Driver.vb" />
+    <Compile Include="Contract\DriverDevice.vb" />
+    <Compile Include="Contract\GeoCoordinates.vb" />
+    <Compile Include="Contract\PagingDrivers.vb" />
+    <Compile Include="Contract\TripAvailabilityRequest1.vb" />
+    <Compile Include="Contract\TripLocation.vb" />
+    <Compile Include="Contract\TripRequest1.vb" />
+    <Compile Include="Contract\TripEnums.vb" />
+    <Compile Include="Contract\UserCard.vb" />
+    <Compile Include="Controllers\BidController.vb" />
+    <Compile Include="Controllers\CarController.vb" />
+    <Compile Include="Controllers\CategorizeController.vb" />
+    <Compile Include="Controllers\CommunicationController.vb" />
+    <Compile Include="Controllers\DeviceController.vb" />
+    <Compile Include="Controllers\DriverRegistrationController.vb" />
+    <Compile Include="Controllers\DriverWorkflowController.vb" />
+    <Compile Include="Controllers\FinancialController.vb" />
+    <Compile Include="Controllers\FireController.vb" />
+    <Compile Include="Controllers\ListController.vb" />
+    <Compile Include="Controllers\LocationController.vb" />
+    <Compile Include="Controllers\MenuController.vb" />
+    <Compile Include="Controllers\MessageController.vb" />
+    <Compile Include="Controllers\NotificationController.vb" />
+    <Compile Include="Controllers\PaymentController.vb" />
+    <Compile Include="Controllers\RatesController.vb" />
+    <Compile Include="Controllers\ReviewController.vb" />
+    <Compile Include="Controllers\RideController.vb" />
+    <Compile Include="Controllers\ServerControlController.vb" />
+    <Compile Include="Controllers\TripController.vb" />
+    <Compile Include="App_GlobalResources\Assets.Admin.js.customized.Drivers.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Assets.Admin.js.customized.Drivers.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Assets.Admin.js.customized.Drivers.En.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Assets.Admin.js.customized.Drivers.En.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Assets.Admin.js.customized.Drivers.He.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Assets.Admin.js.customized.Drivers.He.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Assets.Admin.js.customized.Users.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Assets.Admin.js.customized.Users.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Assets.Admin.js.customized.Users.En.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Assets.Admin.js.customized.Users.En.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Assets.Admin.js.customized.Users.He.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Assets.Admin.js.customized.Users.He.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Assets.JS.customized.AuthenticateAdministrator.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Assets.JS.customized.AuthenticateAdministrator.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Assets.JS.customized.AuthenticateAdministrator.En.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Assets.JS.customized.AuthenticateAdministrator.En.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Assets.JS.customized.AuthenticateAdministrator.He.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Assets.JS.customized.AuthenticateAdministrator.He.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\City.View.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>City.View.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\City.View.En.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>City.View.En.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\City.View.He.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>City.View.He.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Dashboard.Index.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dashboard.Index.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Dashboard.Index.En.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dashboard.Index.En.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Dashboard.Index.He.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dashboard.Index.He.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Driver.ViewDocument.He.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Driver.ViewDocument.He.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Driver.Index.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Driver.Index.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Driver.Index.En.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Driver.Index.En.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Driver.Index.He.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Driver.Index.He.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Driver.View.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Driver.View.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Driver.View.En.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Driver.View.En.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Driver.View.He.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Driver.View.He.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Driver.ViewDocument.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Driver.ViewDocument.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Driver.ViewDocument.En.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Driver.ViewDocument.En.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Home.Index.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Home.Index.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Home.Index.He.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Home.Index.He.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Home.Index.En.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Home.Index.En.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\InterCityRate.View.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InterCityRate.View.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\InterCityRate.View.En1.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InterCityRate.View.En.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\InterCityRate.View.He1.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InterCityRate.View.He.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Promotion.Create.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Promotion.Create.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Promotion.Create.En.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Promotion.Create.En.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Promotion.Create.He.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Promotion.Create.He.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Promotion.View.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Promotion.View.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Promotion.View.En.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Promotion.View.En.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Promotion.View.He.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Promotion.View.He.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Shared._DashboardLayout.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Shared._DashboardLayout.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Shared._DashboardLayout.En.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Shared._DashboardLayout.En.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Shared._DashboardLayout.He.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Shared._DashboardLayout.He.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\User.Index.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>User.Index.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\User.Index.En.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>User.Index.En.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\User.Index.He.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>User.Index.He.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\User.View.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>User.View.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\User.View.En.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>User.View.En.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\User.View.He.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>User.View.He.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.vb" />
+    <Compile Include="App_Start\FilterConfig.vb" />
+    <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="Contract\Airport.vb" />
+    <Compile Include="Contract\AvailableRides.vb" />
+    <Compile Include="Contract\Bound.vb" />
+    <Compile Include="Contract\Car.vb" />
+    <Compile Include="Contract\CarLocation.vb" />
+    <Compile Include="Contract\CarType.vb" />
+    <Compile Include="Contract\City.vb" />
+    <Compile Include="Contract\Contact.vb" />
+    <Compile Include="Contract\ContactVerificationRequest.vb" />
+    <Compile Include="Contract\Conversation.vb" />
+    <Compile Include="Contract\ConversationParticipant.vb" />
+    <Compile Include="Contract\Country.vb" />
+    <Compile Include="Contract\Document.vb" />
+    <Compile Include="Contract\FareEstimate.vb" />
+    <Compile Include="Contract\Extra.vb" />
+    <Compile Include="Contract\File.vb" />
+    <Compile Include="Contract\AirportCityRate.vb" />
+    <Compile Include="Contract\InterCityRate.vb" />
+    <Compile Include="Contract\Leg.vb" />
+    <Compile Include="Contract\Message.vb" />
+    <Compile Include="Contract\PagingUsers.vb" />
+    <Compile Include="Contract\Promotion.vb" />
+    <Compile Include="Contract\RedeemPromotion.vb" />
+    <Compile Include="Contract\RideType.vb" />
+    <Compile Include="Contract\Route.vb" />
+    <Compile Include="Contract\Step.vb" />
+    <Compile Include="Contract\Transaction.vb" />
+    <Compile Include="Contract\Trip.vb" />
+    <Compile Include="Contract\TripFare.vb" />
+    <Compile Include="Contract\TripRating.vb" />
+    <Compile Include="Contract\TripStatus.vb" />
+    <Compile Include="Contract\User.vb" />
+    <Compile Include="Contract\UserSession.vb" />
+    <Compile Include="Contract\UserToken.vb" />
+    <Compile Include="Controllers\AirportCityRateController.vb" />
+    <Compile Include="Controllers\AirportController.vb" />
+    <Compile Include="Controllers\CarTypeController.vb" />
+    <Compile Include="Controllers\CityController.vb" />
+    <Compile Include="Controllers\CountryController.vb" />
+    <Compile Include="Controllers\DashboardController.vb" />
+    <Compile Include="Controllers\DriverController.vb" />
+    <Compile Include="Controllers\ExtraController.vb" />
+    <Compile Include="Controllers\InterCityRateController.vb" />
+    <Compile Include="Controllers\PromotionController.vb" />
+    <Compile Include="Controllers\RideTypeController.vb" />
+    <Compile Include="Controllers\ServiceController.vb" />
+    <Compile Include="Controllers\UserController.vb" />
+    <Compile Include="Controllers\UserWorkflowController.vb" />
+    <Compile Include="Model\DeviceInstanceList.vb" />
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\Constants.vb" />
+    <Compile Include="Contract\Location.vb" />
+    <Compile Include="Contract\LocationList.vb" />
+    <Compile Include="Interface\IListTotal.vb" />
+    <Compile Include="Model\CreateTripModel.vb" />
+    <Compile Include="Interface\IPagerModel.vb" />
+    <Compile Include="Model\ViewAirCityRates.vb" />
+    <Compile Include="Model\ViewAirport.vb" />
+    <Compile Include="Model\ViewDevice.vb" />
+    <Compile Include="Model\ViewDocument.vb" />
+    <Compile Include="Model\ViewDriver.vb" />
+    <Compile Include="Model\ViewLocation.vb" />
+    <Compile Include="Model\ViewTripNew.vb" />
+    <Compile Include="Model\ViewFire.vb" />
+    <Compile Include="Model\ViewPayment.vb" />
+    <Compile Include="Model\ViewCity.vb" />
+    <Compile Include="Model\ViewTrips.vb" />
+    <Compile Include="Model\ViewUser.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Controllers\HomeController.vb" />
+    <Compile Include="Contract\TripLocationList.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\City.View.En.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>City.View.En.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\City.View.He.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>City.View.He.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Dashboard.Index.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Dashboard.Index.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Dashboard.Index.En.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Dashboard.Index.En.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Dashboard.Index.He.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Dashboard.Index.He.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Driver.Index.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Driver.Index.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Driver.Index.En.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Driver.Index.En.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Driver.Index.He.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Driver.Index.He.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Driver.View.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Driver.View.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Driver.View.He.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Driver.View.He.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Driver.View.En.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Driver.View.En.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Driver.ViewDocument.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Driver.ViewDocument.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Driver.ViewDocument.En.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Driver.ViewDocument.En.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Driver.ViewDocument.He.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Driver.ViewDocument.He.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Assets.Admin.js.customized.Users.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Assets.Admin.js.customized.Users.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Assets.Admin.js.customized.Users.En.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Assets.Admin.js.customized.Users.En.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Assets.Admin.js.customized.Users.He.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Assets.Admin.js.customized.Users.He.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Assets.Admin.js.customized.Drivers.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Assets.Admin.js.customized.Drivers.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Assets.Admin.js.customized.Drivers.En.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Assets.Admin.js.customized.Drivers.En.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Assets.Admin.js.customized.Drivers.He.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Assets.Admin.js.customized.Drivers.He.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Assets.JS.customized.AuthenticateAdministrator.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Assets.JS.customized.AuthenticateAdministrator.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Assets.JS.customized.AuthenticateAdministrator.He.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Assets.JS.customized.AuthenticateAdministrator.He.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\Assets.JS.customized.AuthenticateAdministrator.En.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Assets.JS.customized.AuthenticateAdministrator.En.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Home.Index.En.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Home.Index.En.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Home.Index.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Home.Index.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\InterCityRate.View.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>InterCityRate.View.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\InterCityRate.View.He.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>InterCityRate.View.He1.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\InterCityRate.View.En.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>InterCityRate.View.En1.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Promotion.View.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Promotion.View.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Promotion.View.En.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Promotion.View.En.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Promotion.View.He.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Promotion.View.He.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Promotion.Create.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Promotion.Create.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Promotion.Create.En.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Promotion.Create.En.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Promotion.Create.He.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Promotion.Create.He.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Shared._DashboardLayout.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Shared._DashboardLayout.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Shared._DashboardLayout.He.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Shared._DashboardLayout.He.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\Shared._DashboardLayout.En.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Shared._DashboardLayout.En.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\User.Index.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>User.Index.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\User.Index.He.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>User.Index.He.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\User.Index.En.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>User.Index.En.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\User.View.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>User.View.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\User.View.En.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>User.View.En.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\User.View.He.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>User.View.He.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Admin\css\bootstrap-datetimepicker-standalone.css" />
+    <Content Include="Assets\Admin\css\bootstrap-datetimepicker.css" />
+    <Content Include="Assets\Admin\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Assets\Admin\css\bootstrap.min.css" />
+    <Content Include="Assets\Admin\css\material-dashboard-rtl.css" />
+    <Content Include="Assets\Admin\css\material-dashboard.css" />
+    <Content Include="Assets\Admin\css\material-dashboard.min.css" />
+    <Content Include="Assets\Admin\css\site.css" />
+    <Content Include="Assets\Admin\css\spinner.css" />
+    <Content Include="Assets\Admin\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\Admin\img\angular.png" />
+    <Content Include="Assets\Admin\img\apple-icon.png" />
+    <Content Include="Assets\Admin\img\cover.jpg" />
+    <Content Include="Assets\Admin\img\ex1.png" />
+    <Content Include="Assets\Admin\img\ex2.png" />
+    <Content Include="Assets\Admin\img\ex3.png" />
+    <Content Include="Assets\Admin\img\faces\avatar.jpg" />
+    <Content Include="Assets\Admin\img\faces\card-profile1-square.jpg" />
+    <Content Include="Assets\Admin\img\faces\card-profile2-square.jpg" />
+    <Content Include="Assets\Admin\img\faces\marc.jpg" />
+    <Content Include="Assets\Admin\img\favicon.png" />
+    <Content Include="Assets\Admin\img\html.png" />
+    <Content Include="Assets\Admin\img\imac1.png" />
+    <Content Include="Assets\Admin\img\ipad.png" />
+    <Content Include="Assets\Admin\img\iPad2.png" />
+    <Content Include="Assets\Admin\img\iphonex.png" />
+    <Content Include="Assets\Admin\img\Macbook.png" />
+    <Content Include="Assets\Admin\img\mask.png" />
+    <Content Include="Assets\Admin\img\new_logo.png" />
+    <Content Include="Assets\Admin\img\notification.png" />
+    <Content Include="Assets\Admin\img\react.png" />
+    <Content Include="Assets\Admin\img\sidebar-1.jpg" />
+    <Content Include="Assets\Admin\img\sidebar-2.jpg" />
+    <Content Include="Assets\Admin\img\sidebar-3.jpg" />
+    <Content Include="Assets\Admin\img\sidebar-4.jpg" />
+    <Content Include="Assets\Admin\img\table.png" />
+    <Content Include="Assets\Admin\img\vue.png" />
+    <Content Include="Assets\Admin\js\core\bootstrap-material-design.min.js" />
+    <Content Include="Assets\Admin\js\core\jquery.min.js" />
+    <Content Include="Assets\Admin\js\core\popper.min.js" />
+    <Content Include="Assets\Admin\js\customized\Countries.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\CreateCountry.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\AirportCityRates.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\RideTypes.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\CarTypes.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\Airports.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\CreateAirport.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\CreateRideType.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\CreateCarType.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\CreateEmployee.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\CreateCity.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\CreatePromotion.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\Drivers.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\Cities.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\InterCityRates.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\Promotions.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\Extras.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\ShowHelp.js" />
+    <Content Include="Assets\Admin\js\customized\ShowWaitGif.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\Users.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\Summary.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\Territories.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\ViewCountry.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\ViewAirport.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\ViewAirportCityRate.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\ViewRideType.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\ViewCarType.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\ViewDriver.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\CreateExtra.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\ViewCity.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\ViewInterCityRate.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\ViewPromotion.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\ViewExtra.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\ViewUser.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\customized\ViewTerritory.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Admin\js\material-dashboard.js" />
+    <Content Include="Assets\Admin\js\material-dashboard.min.js" />
+    <Content Include="Assets\Admin\js\plugins\arrive.min.js" />
+    <Content Include="Assets\Admin\js\plugins\bootstrap-datetimepicker.min.js" />
+    <Content Include="Assets\Admin\js\plugins\bootstrap-notify.js" />
+    <Content Include="Assets\Admin\js\plugins\bootstrap-selectpicker.js" />
+    <Content Include="Assets\Admin\js\plugins\bootstrap-tagsinput.js" />
+    <Content Include="Assets\Admin\js\plugins\bootstrap.min.js" />
+    <Content Include="Assets\Admin\js\plugins\chartist.min.js" />
+    <Content Include="Assets\Admin\js\plugins\fullcalendar.min.js" />
+    <Content Include="Assets\Admin\js\plugins\jasny-bootstrap.min.js" />
+    <Content Include="Assets\Admin\js\plugins\jquery-jvectormap.js" />
+    <Content Include="Assets\Admin\js\plugins\jquery.bootstrap-wizard.js" />
+    <Content Include="Assets\Admin\js\plugins\jquery.dataTables.min.js" />
+    <Content Include="Assets\Admin\js\plugins\jquery.tagsinput.js" />
+    <Content Include="Assets\Admin\js\plugins\jquery.validate.min.js" />
+    <Content Include="Assets\Admin\js\plugins\material.min.js" />
+    <Content Include="Assets\Admin\js\plugins\moment.min.js" />
+    <Content Include="Assets\Admin\js\plugins\nouislider.min.js" />
+    <Content Include="Assets\Admin\js\plugins\perfect-scrollbar.jquery.min.js" />
+    <Content Include="Assets\Admin\js\plugins\sweetalert2.js" />
+    <Content Include="Assets\Admin\js\site.js" />
+    <Content Include="Assets\CSS\material-kit.css" />
+    <Content Include="Assets\CSS\material-kit.min.css" />
+    <Content Include="Assets\CSS\site.css" />
+    <Content Include="Assets\Image\apple-icon.png" />
+    <Content Include="Assets\Image\bg.jpg" />
+    <Content Include="Assets\Image\bg2.jpg" />
+    <Content Include="Assets\Image\bg3.jpg" />
+    <Content Include="Assets\Image\bg7.jpg" />
+    <Content Include="Assets\Image\city-profile.jpg" />
+    <Content Include="Assets\Image\city.jpg" />
+    <Content Include="Assets\Image\examples\clem-onojegaw.jpg" />
+    <Content Include="Assets\Image\examples\clem-onojeghuo.jpg" />
+    <Content Include="Assets\Image\examples\cynthia-del-rio.jpg" />
+    <Content Include="Assets\Image\examples\mariya-georgieva.jpg" />
+    <Content Include="Assets\Image\examples\olu-eletu.jpg" />
+    <Content Include="Assets\Image\examples\studio-1.jpg" />
+    <Content Include="Assets\Image\examples\studio-2.jpg" />
+    <Content Include="Assets\Image\examples\studio-3.jpg" />
+    <Content Include="Assets\Image\examples\studio-4.jpg" />
+    <Content Include="Assets\Image\examples\studio-5.jpg" />
+    <Content Include="Assets\Image\faces\avatar.jpg" />
+    <Content Include="Assets\Image\faces\camp.jpg" />
+    <Content Include="Assets\Image\faces\card-profile1-square.jpg" />
+    <Content Include="Assets\Image\faces\card-profile2-square.jpg" />
+    <Content Include="Assets\Image\faces\card-profile4-square.jpg" />
+    <Content Include="Assets\Image\faces\card-profile5-square.jpg" />
+    <Content Include="Assets\Image\faces\card-profile6-square.jpg" />
+    <Content Include="Assets\Image\faces\christian.jpg" />
+    <Content Include="Assets\Image\faces\kendall.jpg" />
+    <Content Include="Assets\Image\faces\marc.jpg" />
+    <Content Include="Assets\Image\favicon.png" />
+    <Content Include="Assets\Image\landing.jpg" />
+    <Content Include="Assets\Image\Logo108.jpg" />
+    <Content Include="Assets\Image\LogoGVK.jpg" />
+    <Content Include="Assets\Image\profile.jpg" />
+    <Content Include="Assets\Image\profile_city.jpg" />
+    <Content Include="Assets\JS\core\bootstrap-material-design.min.js" />
+    <Content Include="Assets\JS\core\jquery.min.js" />
+    <Content Include="Assets\JS\core\popper.min.js" />
+    <Content Include="Assets\JS\customized\AuthenticateAdministrator.js" />
+    <Content Include="Assets\JS\material-kit.js" />
+    <Content Include="Assets\JS\material-kit.min.js" />
+    <Content Include="Assets\JS\plugins\bootstrap-datetimepicker.js" />
+    <Content Include="Assets\JS\plugins\moment.min.js" />
+    <Content Include="Assets\JS\plugins\nouislider.min.js" />
+    <Content Include="Assets\Admin\js\material-dashboard.js.map" />
+    <Content Include="Assets\Admin\css\bootstrap.min.css.map" />
+    <Content Include="Assets\Admin\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\Admin\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\Admin\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\Admin\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="App_GlobalResources\Home.Index.He.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Home.Index.He.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\City.View.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>City.View.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\Admin\css\material-dashboard.css.map" />
+    <Content Include="Assets\CSS\material-kit.css.map" />
+    <Content Include="Assets\JS\material-kit.js.map" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\Default Settings.pubxml" />
+    <None Include="My Project\PublishProfiles\Default Settings1.pubxml" />
+    <None Include="My Project\PublishProfiles\Vultr - TaxiStar - Admin.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="version.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Shared\_DashboardLayout.vbhtml" />
+    <Content Include="Views\Dashboard\Index.vbhtml" />
+    <Content Include="Views\User\Index.vbhtml" />
+    <Content Include="Views\User\View.vbhtml" />
+    <Content Include="Views\Driver\Index.vbhtml" />
+    <Content Include="Views\Driver\View.vbhtml" />
+    <Content Include="Views\Driver\ViewDocument.vbhtml" />
+    <Content Include="Views\Extra\Index.vbhtml" />
+    <Content Include="Views\Extra\View.vbhtml" />
+    <Content Include="Views\Extra\Create.vbhtml" />
+    <Content Include="Views\Promotion\Index.vbhtml" />
+    <Content Include="Views\Promotion\View.vbhtml" />
+    <Content Include="Views\Promotion\Create.vbhtml" />
+    <Content Include="Views\City\Index.vbhtml" />
+    <Content Include="Views\City\ViewCity.vbhtml" />
+    <Content Include="Views\City\Create.vbhtml" />
+    <Content Include="Views\Airport\Create.vbhtml" />
+    <Content Include="Views\Airport\Index.vbhtml" />
+    <Content Include="Views\Airport\View.vbhtml" />
+    <Content Include="Views\InterCityRate\Index.vbhtml" />
+    <Content Include="Views\InterCityRate\View.vbhtml" />
+    <Content Include="Views\CarType\Create.vbhtml" />
+    <Content Include="Views\CarType\Index.vbhtml" />
+    <Content Include="Views\CarType\View.vbhtml" />
+    <Content Include="Views\RideType\Create.vbhtml" />
+    <Content Include="Views\RideType\Index.vbhtml" />
+    <Content Include="Views\RideType\View.vbhtml" />
+    <Content Include="Views\Country\Create.vbhtml" />
+    <Content Include="Views\Country\Index.vbhtml" />
+    <Content Include="Views\Country\View.vbhtml" />
+    <Content Include="Views\AirportCityRate\Index.vbhtml" />
+    <Content Include="Views\AirportCityRate\View.vbhtml" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Trip\Index.vbhtml" />
+    <Content Include="Views\Ride\Index.vbhtml" />
+    <Content Include="Views\Bid\Index.vbhtml" />
+    <Content Include="Views\Message\Index.vbhtml" />
+    <Content Include="Views\Review\Index.vbhtml" />
+    <Content Include="Views\Payment\Index.vbhtml" />
+    <Content Include="Views\Location\Place.vbhtml" />
+    <Content Include="Views\Fire\Index.vbhtml" />
+    <Content Include="Views\Trip\Create.vbhtml" />
+    <Content Include="Views\Location\Create.vbhtml" />
+    <Content Include="Views\Location\View.vbhtml" />
+    <Content Include="Views\Shared\Name.vbhtml" />
+    <Content Include="Views\Trip\ViewOneTrip.vbhtml" />
+    <Content Include="Views\Shared\CityHelp.vbhtml" />
+    <Content Include="Views\AirportCityRate\Create.vbhtml" />
+    <Content Include="Views\AirportCityRate\AirHelp.vbhtml" />
+    <Content Include="Views\AirportCityRate\AirportCity.vbhtml" />
+    <Content Include="Views\Shared\Pager.vbhtml" />
+    <Content Include="Views\Location\Index.vbhtml" />
+    <Content Include="Views\Car\Index.vbhtml" />
+    <Content Include="Views\Notification\Index.vbhtml" />
+    <Content Include="Views\Rates\Index.vbhtml" />
+    <Content Include="Views\Shared\LocationMenu.vbhtml" />
+    <Content Include="Views\Shared\RatesMenu.vbhtml" />
+    <Content Include="Views\Shared\CategorizeMenu.vbhtml" />
+    <Content Include="Views\Categorize\Index.vbhtml" />
+    <Content Include="Views\Shared\ListMenu.vbhtml" />
+    <Content Include="Views\Shared\UserWorkflowMenu.vbhtml" />
+    <Content Include="Views\Shared\DriverRegistrationMenu.vbhtml" />
+    <Content Include="Views\Shared\DriverWorkflowMenu.vbhtml" />
+    <Content Include="Views\Shared\FinancialMenu.vbhtml" />
+    <Content Include="Views\Shared\CommunicationMenu.vbhtml" />
+    <Content Include="Views\Shared\ServerControlMenu.vbhtml" />
+    <Content Include="Views\Menu\Jump.vbhtml" />
+    <Content Include="Views\Menu\Index.vbhtml" />
+    <Content Include="Views\List\Index.vbhtml" />
+    <Content Include="Views\UserWorkflow\Index.vbhtml" />
+    <Content Include="Views\DriverRegistration\Index.vbhtml" />
+    <Content Include="Views\DriverWorkflow\Index.vbhtml" />
+    <Content Include="Views\Financial\Index.vbhtml" />
+    <Content Include="Views\Communication\Index.vbhtml" />
+    <Content Include="Views\ServerControl\Index.vbhtml" />
+    <Content Include="Views\Device\Index.vbhtml" />
+    <Content Include="Views\Device\Push.vbhtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <None Include="packages.config" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Views\_ViewStart.vbhtml" />
+    <Content Include="Views\Home\Index.vbhtml" />
+    <Content Include="Views\Shared\Error.vbhtml" />
+    <Content Include="Views\Shared\_Layout.vbhtml" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Assets\Font\" />
+    <Folder Include="Views\Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60065</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60065/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

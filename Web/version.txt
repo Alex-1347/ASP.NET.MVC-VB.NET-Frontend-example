@@ -1,0 +1,7 @@
+﻿GitRepository#G:\Projects\Taxi\Admin-Web-master\
+SiteBuildDate#2021-04-26 00:46:24
+Version#8
+CommitHash#35cad76b1c7a08c523a5b38803ff19b0106a7fd8
+CommitAuthor#AlexEv-1337 <burgas275@gmail.com>
+CommitDate#Mon Apr 26 00:44:53 2021 +0300
+CommitInfo#New menu and dashboard

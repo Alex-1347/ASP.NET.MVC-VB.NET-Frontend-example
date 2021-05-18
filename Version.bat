@@ -1,0 +1,1 @@
+G:\Projects\Taxi\Version\Version\bin\Debug\version G:\Projects\Taxi\Admin-Web-master\ G:\Projects\Taxi\Admin-Web-master\Web\version.txt
